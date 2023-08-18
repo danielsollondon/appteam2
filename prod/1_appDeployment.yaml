@@ -25,6 +25,12 @@ spec:
       containers:
       - name: app
         image: dansregwu3.azurecr.io/core/app:v5.18
+        limits:
+          cpu: "2"
+          memory: 2000Mi
+        requests:
+          cpu: "1"
+          memory: 1500Mi
         ports:
           - containerPort: 80
             name: http-secure-80
@@ -42,6 +48,12 @@ spec:
   containers:
   - name: db
     image: dansregwu3.azurecr.io/core/db:v2.3
+    limits:
+      cpu: "4"
+      memory: 4000Mi
+    requests:
+      cpu: "2"
+      memory: 2500Mi
     ports:
       - containerPort: 3306
         name: mysql-3306
