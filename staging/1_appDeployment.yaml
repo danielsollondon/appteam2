@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: appteam2-app2-ns
   labels:
-    name: appteam2-ns
+    name: appteam2-app2-ns
 ---
 apiVersion: apps/v1
 kind: Deployment
