@@ -13,9 +13,9 @@ metadata:
 spec:
   hard:
     requests.cpu: "4"
-    requests.memory: 7Gi
+    requests.memory: 4Gi
     limits.cpu: "6"
-    limits.memory: 12Gi
+    limits.memory: 5Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -43,7 +43,7 @@ spec:
             memory: 2000Mi
           requests:
             cpu: "0.1"
-            memory: 500Mi
+            memory: 1000Mi
         ports:
           - containerPort: 80
             name: http-secure-80
@@ -64,7 +64,7 @@ spec:
     resources:
       limits:
         cpu: "2"
-        memory: 3000Mi
+        memory: 2000Mi
       requests:
         cpu: "1"
         memory: 1000Mi
