@@ -40,10 +40,10 @@ spec:
         resources:
           limits:
             cpu: "1"
-            memory: 4000Mi
+            memory: 2000Mi
           requests:
             cpu: "0.1"
-            memory: 2000Mi
+            memory: 500Mi
         ports:
           - containerPort: 80
             name: http-secure-80
@@ -63,11 +63,11 @@ spec:
     image: dansregwu3.azurecr.io/core/db:v2.3
     resources:
       limits:
-        cpu: "2"
-        memory: 6000Mi
-      requests:
         cpu: "1"
-        memory: 2001Mi
+        memory: 2000Mi
+      requests:
+        cpu: "0.1"
+        memory: 1000Mi
     ports:
       - containerPort: 3306
         name: mysql-3306
