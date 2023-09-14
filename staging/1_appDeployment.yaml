@@ -12,10 +12,10 @@ metadata:
   namespace: appteam2-app2-ns
 spec:
   hard:
-    requests.cpu: "40"
-    requests.memory: 20Gi
-    limits.cpu: "60"
-    limits.memory: 40Gi
+    requests.cpu: "2"
+    requests.memory: 2Gi
+    limits.cpu: "4"
+    limits.memory: 4Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
