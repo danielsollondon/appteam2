@@ -12,10 +12,10 @@ metadata:
   namespace: appteam2-app2-ns
 spec:
   hard:
-    requests.cpu: "20"
-    requests.memory: 20Gi
-    limits.cpu: "40"
-    limits.memory: 40Gi
+    requests.cpu: "4"
+    requests.memory: 4Gi
+    limits.cpu: "6"
+    limits.memory: 8Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -63,11 +63,11 @@ spec:
     image: dansregwu3.azurecr.io/core/db:v2.3
     resources:
       limits:
+        cpu: "2"
+        memory: 4000Mi
+      requests:
         cpu: "1"
         memory: 2000Mi
-      requests:
-        cpu: "0.1"
-        memory: 1000Mi
     ports:
       - containerPort: 3306
         name: mysql-3306
@@ -101,6 +101,3 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
-
-
-
