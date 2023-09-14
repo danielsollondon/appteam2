@@ -13,9 +13,9 @@ metadata:
 spec:
   hard:
     requests.cpu: "40"
-    requests.memory: 7Gi
+    requests.memory: 20Gi
     limits.cpu: "60"
-    limits.memory: 12Gi
+    limits.memory: 40Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
