@@ -64,10 +64,17 @@ spec:
     resources:
       limits:
         cpu: "2"
+<<<<<<< HEAD
         memory: 4000Mi
       requests:
         cpu: "0.2"
         memory: 1000Mi
+=======
+        memory: 1000Mi
+      requests:
+        cpu: "1"
+        memory: 200Mi
+>>>>>>> 8aa324a (fixing fat finger)
     ports:
       - containerPort: 3306
         name: mysql-3306
@@ -101,4 +108,7 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8aa324a (fixing fat finger)
