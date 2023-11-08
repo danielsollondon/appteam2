@@ -101,7 +101,3 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
-<<<<<<< HEAD
-
-=======
->>>>>>> 8aa324a (fixing fat finger)
