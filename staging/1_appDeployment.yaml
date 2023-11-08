@@ -49,6 +49,31 @@ spec:
             name: http-secure-80
 ---
 apiVersion: v1
+kind: Pod
+metadata:
+  name: db
+  namespace: appteam2-app2-ns
+  labels:
+    app.kubernetes.io/name: db
+spec:
+  hostname: mastersql01
+  subdomain: sqldomain
+  containers:
+  - name: db
+    image: dansregwu3.azurecr.io/core/db:v2.3
+    resources:
+      limits:
+        cpu: "2"
+        memory: 4000Mi
+      requests:
+        cpu: "0.2"
+        memory: 1000Mi
+    ports:
+      - containerPort: 3306
+        name: mysql-3306
+
+---
+apiVersion: v1
 kind: Service
 metadata:
   name: sqldomain
